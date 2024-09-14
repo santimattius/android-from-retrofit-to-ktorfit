@@ -10,7 +10,7 @@ import com.santimattius.basic.skeleton.ui.theme.BasicSkeletonTheme
 
 @Composable
 @Suppress("MaxLineLength", "ForbiddenComment")
-fun BasicSkeletonContainer(content: @Composable () -> Unit) {
+fun AppRootContainer(content: @Composable () -> Unit) {
     BasicSkeletonTheme {
         // A surface container using the 'background' color from the theme
         Surface(

@@ -13,5 +13,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "android-koin-skeleton"
+rootProject.name = "android-from-retrofit-to-ktorfit"
 include(":app")
