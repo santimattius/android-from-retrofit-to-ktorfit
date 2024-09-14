@@ -1,12 +1,13 @@
 package com.santimattius.basic.skeleton.core.data.dto
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-import com.google.gson.annotations.SerializedName
-
+@Serializable
 data class CharacterDto(
-    @SerializedName("id") val id: Int,
-    @SerializedName("name") val name: String,
-    @SerializedName("image") val image: String,
-    @SerializedName("description") val description: String,
-    @SerializedName("affiliation") val affiliation: String,
+    @SerialName("id") val id: Int,
+    @SerialName("name") val name: String,
+    @SerialName("image") val image: String,
+    @SerialName("description") val description: String,
+    @SerialName("affiliation") val affiliation: String,
 )
