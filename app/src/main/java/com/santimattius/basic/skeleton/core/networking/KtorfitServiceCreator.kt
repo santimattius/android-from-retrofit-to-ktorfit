@@ -7,7 +7,7 @@ import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
 
-class KtorfitServiceCreator(val baseUrl: String) {
+class KtorfitServiceCreator(baseUrl: String) {
 
     private val httpClient = HttpClient {
         install(ContentNegotiation) {
@@ -19,10 +19,10 @@ class KtorfitServiceCreator(val baseUrl: String) {
             )
         }
     }
-    private val retrofit = Ktorfit.Builder()
+    private val ktorfit = Ktorfit.Builder()
         .baseUrl(baseUrl)
         .httpClient(httpClient)
         .build()
 
-    fun createCharacterServices() = retrofit.createCharacterServices()
+    fun createCharacterServices() = ktorfit.createCharacterServices()
 }
