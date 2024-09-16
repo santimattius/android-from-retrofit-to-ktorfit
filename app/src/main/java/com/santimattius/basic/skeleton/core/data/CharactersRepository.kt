@@ -1,14 +1,19 @@
 package com.santimattius.basic.skeleton.core.data
 
 import com.santimattius.basic.skeleton.core.data.dto.CharacterResponse
-import com.santimattius.basic.skeleton.core.data.service.CharacterServices
 import com.santimattius.basic.skeleton.core.domain.Character
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.request.get
 
 class CharactersRepository(
-    private val service: CharacterServices,
+    private val httpClient: HttpClient,
 ) {
 
-    suspend fun getCharacters() = runCatching { service.getCharacters().asCharacterDomainModel() }
+    suspend fun getCharacters() = runCatching {
+        val response = httpClient.get("characters").body<CharacterResponse>()
+        response.asCharacterDomainModel()
+    }
 
 }
 
