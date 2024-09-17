@@ -10,7 +10,6 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.google.secrets.gradle.plugin)
     alias(libs.plugins.automattic.measure.builds)
-    alias(libs.plugins.ktorfit)
 }
 
 apply("$rootDir/gradle/coverage.gradle")
@@ -124,7 +123,6 @@ dependencies {
     implementation(libs.bundles.coroutine)
     testImplementation(libs.coroutine.test)
 
-    implementation(libs.ktorfit.lib)
     implementation(libs.ktor.client.core)
     implementation(libs.ktor.client.content.negotiation)
     implementation(libs.ktor.serialization.kotlinx.json)
