@@ -4,9 +4,11 @@ plugins {
     alias(libs.plugins.compose.compiler) apply false
     alias(libs.plugins.kotlin) apply false
     alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.kotlinSerialization) apply false
     alias(libs.plugins.detekt) apply false
     alias(libs.plugins.google.secrets.gradle.plugin) apply false
     alias(libs.plugins.automattic.measure.builds) apply false
+    alias(libs.plugins.ktorfit) apply false
 }
 
 buildscript {

@@ -2,7 +2,7 @@ package com.santimattius.basic.skeleton.di
 
 import com.santimattius.basic.skeleton.core.data.CharactersRepository
 import com.santimattius.basic.skeleton.core.data.service.CharacterServices
-import com.santimattius.basic.skeleton.core.networking.RetrofitServiceCreator
+import com.santimattius.basic.skeleton.core.networking.KtorfitServiceCreator
 import org.koin.core.annotation.Module
 import org.koin.core.annotation.Singleton
 
@@ -10,13 +10,13 @@ import org.koin.core.annotation.Singleton
 class AppModule {
 
     @Singleton
-    fun provideRetrofitCreator(): RetrofitServiceCreator {
-        return RetrofitServiceCreator(baseUrl = "https://dragonball-api.com/api/")
+    fun provideServiceCreator(): KtorfitServiceCreator {
+        return KtorfitServiceCreator(baseUrl = "https://dragonball-api.com/api/")
     }
 
     @Singleton
-    fun provideCharacterService(serviceCreator: RetrofitServiceCreator): CharacterServices {
-        return serviceCreator.create()
+    fun provideCharacterService(serviceCreator: KtorfitServiceCreator): CharacterServices {
+        return serviceCreator.createCharacterServices()
     }
 
     @Singleton

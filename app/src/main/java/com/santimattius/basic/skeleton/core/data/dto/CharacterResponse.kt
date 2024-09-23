@@ -1,8 +1,9 @@
 package com.santimattius.basic.skeleton.core.data.dto
 
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-import com.google.gson.annotations.SerializedName
-
+@Serializable
 data class CharacterResponse(
-    @SerializedName("items") val items: List<CharacterDto>,
+    @SerialName("items") val items: List<CharacterDto>,
 )
