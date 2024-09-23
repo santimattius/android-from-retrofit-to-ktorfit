@@ -2,6 +2,9 @@
 
 This is basic android project with essential configurations for app develop in android.
 
+![Playground - Page 3(1)](https://github.com/user-attachments/assets/fdaa91c3-56cf-4ebc-9eec-d239bc20336a)
+
+
 ## Verification
 
 Run check project:
