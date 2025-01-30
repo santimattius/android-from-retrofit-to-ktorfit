@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.compose.compiler)
     alias(libs.plugins.kotlin)
     alias(libs.plugins.ksp)
-    alias(libs.plugins.kotlinSerialization)
     alias(libs.plugins.detekt)
     alias(libs.plugins.google.secrets.gradle.plugin)
     alias(libs.plugins.automattic.measure.builds)
@@ -105,7 +104,7 @@ measureBuilds {
 }
 
 ksp {
-    arg("KOIN_CONFIG_CHECK", "true")
+    arg("KOIN_CONFIG_CHECK","true")
 }
 
 dependencies {
@@ -122,15 +121,14 @@ dependencies {
 
     implementation(libs.bundles.coroutine)
     testImplementation(libs.coroutine.test)
-
-    implementation(libs.ktor.client.core)
-    implementation(libs.ktor.client.content.negotiation)
-    implementation(libs.ktor.serialization.kotlinx.json)
-    implementation(libs.ktor.client.okhttp)
+    implementation(libs.bundles.retrofit)
+    implementation(libs.gson.core)
+    testImplementation(libs.mockwebserver)
 
     implementation(platform(libs.koin.bom))
     implementation(libs.koin.android)
     implementation(libs.koin.androidx.compose)
+
     compileOnly(libs.koin.annotations.core)
     ksp(libs.koin.annotations.compiler)
 
