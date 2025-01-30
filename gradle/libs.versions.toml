@@ -16,7 +16,7 @@ lifecycle = "2.8.5"
 coroutine = "1.9.0"
 
 ktorfit = "2.1.0"
-ktorVersion = "2.3.12"
+ktorVersion = "3.0.3"
 
 coil = "2.7.0"
 
